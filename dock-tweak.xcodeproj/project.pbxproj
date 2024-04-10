@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2967988D2BC73F2500B199A5 /* Tile.h in Headers */ = {isa = PBXBuildFile; fileRef = 2967988C2BC73F2500B199A5 /* Tile.h */; };
 		2989C5B82BC71A9B002BEFB7 /* ellekit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */; };
 		2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 2989C5BA2BC71BA4002BEFB7 /* log.h */; };
-		2989C5BD2BC71BA4002BEFB7 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2989C5BB2BC71BA4002BEFB7 /* log.c */; };
-		29D49EB02BC7198E00444592 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 29D49EAF2BC7198E00444592 /* main.c */; };
+		2989C5BD2BC71BA4002BEFB7 /* log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2989C5BB2BC71BA4002BEFB7 /* log.m */; };
+		29D49EB02BC7198E00444592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D49EAF2BC7198E00444592 /* main.m */; };
 		29D49EB32BC719C400444592 /* substrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D49EB22BC719C400444592 /* substrate.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2967988C2BC73F2500B199A5 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
 		2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ellekit.dylib; path = ../../../Library/TweakInject/ellekit.dylib; sourceTree = "<group>"; };
 		2989C5BA2BC71BA4002BEFB7 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		2989C5BB2BC71BA4002BEFB7 /* log.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = log.c; sourceTree = "<group>"; };
+		2989C5BB2BC71BA4002BEFB7 /* log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = log.m; sourceTree = "<group>"; };
 		29C31B732BC719280004CB07 /* libchange-label.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libchange-label.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29D49EAF2BC7198E00444592 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		29D49EAF2BC7198E00444592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29D49EB12BC7199F00444592 /* libchange-label.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "libchange-label.plist"; sourceTree = "<group>"; };
 		29D49EB22BC719C400444592 /* substrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substrate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,11 +66,12 @@
 		29D49EAE2BC7197600444592 /* change-label */ = {
 			isa = PBXGroup;
 			children = (
-				29D49EAF2BC7198E00444592 /* main.c */,
+				29D49EAF2BC7198E00444592 /* main.m */,
 				29D49EB12BC7199F00444592 /* libchange-label.plist */,
 				29D49EB22BC719C400444592 /* substrate.h */,
 				2989C5BA2BC71BA4002BEFB7 /* log.h */,
-				2989C5BB2BC71BA4002BEFB7 /* log.c */,
+				2989C5BB2BC71BA4002BEFB7 /* log.m */,
+				2967988C2BC73F2500B199A5 /* Tile.h */,
 			);
 			path = "change-label";
 			sourceTree = "<group>";
@@ -80,6 +83,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2967988D2BC73F2500B199A5 /* Tile.h in Headers */,
 				29D49EB32BC719C400444592 /* substrate.h in Headers */,
 				2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */,
 			);
@@ -163,8 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2989C5BD2BC71BA4002BEFB7 /* log.c in Sources */,
-				29D49EB02BC7198E00444592 /* main.c in Sources */,
+				2989C5BD2BC71BA4002BEFB7 /* log.m in Sources */,
+				29D49EB02BC7198E00444592 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

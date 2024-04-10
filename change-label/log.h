@@ -13,6 +13,5 @@
 #define LOGFILE "/Users/jb/log_dock.txt"
 
 void init_log_file(const char *filename);
-void lprintf(const char *format, ...);
-void close_log_file(void);
+void NSLogf(const char *format, ...);
 #endif /* log_h */
