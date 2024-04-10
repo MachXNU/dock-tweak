@@ -6,8 +6,22 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2989C5B82BC71A9B002BEFB7 /* ellekit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */; };
+		2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 2989C5BA2BC71BA4002BEFB7 /* log.h */; };
+		2989C5BD2BC71BA4002BEFB7 /* log.c in Sources */ = {isa = PBXBuildFile; fileRef = 2989C5BB2BC71BA4002BEFB7 /* log.c */; };
+		29D49EB02BC7198E00444592 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 29D49EAF2BC7198E00444592 /* main.c */; };
+		29D49EB32BC719C400444592 /* substrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D49EB22BC719C400444592 /* substrate.h */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		29C31B732BC719280004CB07 /* libdock-tweak.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libdock-tweak.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ellekit.dylib; path = ../../../Library/TweakInject/ellekit.dylib; sourceTree = "<group>"; };
+		2989C5BA2BC71BA4002BEFB7 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		2989C5BB2BC71BA4002BEFB7 /* log.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = log.c; sourceTree = "<group>"; };
+		29C31B732BC719280004CB07 /* libchange-label.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libchange-label.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D49EAF2BC7198E00444592 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		29D49EB12BC7199F00444592 /* libchange-label.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "libchange-label.plist"; sourceTree = "<group>"; };
+		29D49EB22BC719C400444592 /* substrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substrate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -15,25 +29,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2989C5B82BC71A9B002BEFB7 /* ellekit.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2989C5B62BC71A9B002BEFB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29C31B6A2BC719280004CB07 = {
 			isa = PBXGroup;
 			children = (
+				29D49EAE2BC7197600444592 /* change-label */,
 				29C31B742BC719280004CB07 /* Products */,
+				2989C5B62BC71A9B002BEFB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		29C31B742BC719280004CB07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29C31B732BC719280004CB07 /* libdock-tweak.dylib */,
+				29C31B732BC719280004CB07 /* libchange-label.dylib */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		29D49EAE2BC7197600444592 /* change-label */ = {
+			isa = PBXGroup;
+			children = (
+				29D49EAF2BC7198E00444592 /* main.c */,
+				29D49EB12BC7199F00444592 /* libchange-label.plist */,
+				29D49EB22BC719C400444592 /* substrate.h */,
+				2989C5BA2BC71BA4002BEFB7 /* log.h */,
+				2989C5BB2BC71BA4002BEFB7 /* log.c */,
+			);
+			path = "change-label";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -43,27 +80,30 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D49EB32BC719C400444592 /* substrate.h in Headers */,
+				2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		29C31B722BC719280004CB07 /* dock-tweak */ = {
+		29C31B722BC719280004CB07 /* change-label */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "dock-tweak" */;
+			buildConfigurationList = 29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-label" */;
 			buildPhases = (
 				29C31B6F2BC719280004CB07 /* Headers */,
 				29C31B702BC719280004CB07 /* Sources */,
 				29C31B712BC719280004CB07 /* Frameworks */,
+				2989C5B92BC71AB8002BEFB7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "dock-tweak";
+			name = "change-label";
 			productName = "dock-tweak";
-			productReference = 29C31B732BC719280004CB07 /* libdock-tweak.dylib */;
+			productReference = 29C31B732BC719280004CB07 /* libchange-label.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -93,16 +133,38 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29C31B722BC719280004CB07 /* dock-tweak */,
+				29C31B722BC719280004CB07 /* change-label */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2989C5B92BC71AB8002BEFB7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nscp $TARGET_BUILD_DIR/*.dylib $PROJECT_DIR/change-label/*.plist VenturaVM:/Library/TweakInject\necho \"Tweak copied to VM\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29C31B702BC719280004CB07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2989C5BD2BC71BA4002BEFB7 /* log.c in Sources */,
+				29D49EB02BC7198E00444592 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +283,16 @@
 		29C31B782BC719280004CB07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64e;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZKZ68B3H4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/TweakInject",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -234,11 +301,16 @@
 		29C31B792BC719280004CB07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64e;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HZKZ68B3H4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/TweakInject",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -256,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "dock-tweak" */ = {
+		29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-label" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29C31B782BC719280004CB07 /* Debug */,
