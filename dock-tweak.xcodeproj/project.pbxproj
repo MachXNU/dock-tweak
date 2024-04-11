@@ -11,6 +11,9 @@
 		2989C5B82BC71A9B002BEFB7 /* ellekit.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */; };
 		2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 2989C5BA2BC71BA4002BEFB7 /* log.h */; };
 		2989C5BD2BC71BA4002BEFB7 /* log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2989C5BB2BC71BA4002BEFB7 /* log.m */; };
+		29AE31D32BC7E646008BC1BA /* TileHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 29AE31D22BC7E646008BC1BA /* TileHook.h */; };
+		29AE31D52BC7E64F008BC1BA /* TileHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AE31D42BC7E64F008BC1BA /* TileHook.m */; };
+		29AE31D92BC7E9B6008BC1BA /* DOCKTileLayerHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AE31D82BC7E9B6008BC1BA /* DOCKTileLayerHook.m */; };
 		29D49EB02BC7198E00444592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D49EAF2BC7198E00444592 /* main.m */; };
 		29D49EB32BC719C400444592 /* substrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D49EB22BC719C400444592 /* substrate.h */; };
 		29E8D0AE2BC7C09E00342F5E /* DOCKTileLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */; };
@@ -23,6 +26,10 @@
 		2989C5BB2BC71BA4002BEFB7 /* log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = log.m; sourceTree = "<group>"; };
 		299D889F2BC7DB310052F1B7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		299D88A12BC7DB510052F1B7 /* dock-with-only-finder-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dock-with-only-finder-icons.png"; sourceTree = "<group>"; };
+		29AE31D22BC7E646008BC1BA /* TileHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileHook.h; sourceTree = "<group>"; };
+		29AE31D42BC7E64F008BC1BA /* TileHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileHook.m; sourceTree = "<group>"; };
+		29AE31D72BC7E9AE008BC1BA /* DOCKTileLayerHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOCKTileLayerHook.h; sourceTree = "<group>"; };
+		29AE31D82BC7E9B6008BC1BA /* DOCKTileLayerHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOCKTileLayerHook.m; sourceTree = "<group>"; };
 		29C31B732BC719280004CB07 /* libchange-icon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libchange-icon.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D49EAF2BC7198E00444592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29D49EB12BC7199F00444592 /* libchange-icon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "libchange-icon.plist"; sourceTree = "<group>"; };
@@ -60,6 +67,26 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		29AE31D12BC7E628008BC1BA /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				2967988C2BC73F2500B199A5 /* Tile.h */,
+				29AE31D22BC7E646008BC1BA /* TileHook.h */,
+				29AE31D42BC7E64F008BC1BA /* TileHook.m */,
+			);
+			path = Tile;
+			sourceTree = "<group>";
+		};
+		29AE31D62BC7E999008BC1BA /* DOCKTileLayer */ = {
+			isa = PBXGroup;
+			children = (
+				29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */,
+				29AE31D72BC7E9AE008BC1BA /* DOCKTileLayerHook.h */,
+				29AE31D82BC7E9B6008BC1BA /* DOCKTileLayerHook.m */,
+			);
+			path = DOCKTileLayer;
+			sourceTree = "<group>";
+		};
 		29C31B6A2BC719280004CB07 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +109,8 @@
 		29D49EAE2BC7197600444592 /* change-icon */ = {
 			isa = PBXGroup;
 			children = (
-				29E8D0AF2BC7C0A500342F5E /* Headers */,
+				29AE31D62BC7E999008BC1BA /* DOCKTileLayer */,
+				29AE31D12BC7E628008BC1BA /* Tile */,
 				29D49EB12BC7199F00444592 /* libchange-icon.plist */,
 				2989C5BA2BC71BA4002BEFB7 /* log.h */,
 				2989C5BB2BC71BA4002BEFB7 /* log.m */,
@@ -90,15 +118,6 @@
 				29D49EAF2BC7198E00444592 /* main.m */,
 			);
 			path = "change-icon";
-			sourceTree = "<group>";
-		};
-		29E8D0AF2BC7C0A500342F5E /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				2967988C2BC73F2500B199A5 /* Tile.h */,
-				29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +129,7 @@
 			files = (
 				2967988D2BC73F2500B199A5 /* Tile.h in Headers */,
 				29E8D0AE2BC7C09E00342F5E /* DOCKTileLayer.h in Headers */,
+				29AE31D32BC7E646008BC1BA /* TileHook.h in Headers */,
 				29D49EB32BC719C400444592 /* substrate.h in Headers */,
 				2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */,
 			);
@@ -194,7 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2989C5BD2BC71BA4002BEFB7 /* log.m in Sources */,
+				29AE31D52BC7E64F008BC1BA /* TileHook.m in Sources */,
 				29D49EB02BC7198E00444592 /* main.m in Sources */,
+				29AE31D92BC7E9B6008BC1BA /* DOCKTileLayerHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
