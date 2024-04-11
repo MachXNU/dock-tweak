@@ -13,6 +13,7 @@
 		2989C5BD2BC71BA4002BEFB7 /* log.m in Sources */ = {isa = PBXBuildFile; fileRef = 2989C5BB2BC71BA4002BEFB7 /* log.m */; };
 		29D49EB02BC7198E00444592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D49EAF2BC7198E00444592 /* main.m */; };
 		29D49EB32BC719C400444592 /* substrate.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D49EB22BC719C400444592 /* substrate.h */; };
+		29E8D0AE2BC7C09E00342F5E /* DOCKTileLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,14 @@
 		2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ellekit.dylib; path = ../../../Library/TweakInject/ellekit.dylib; sourceTree = "<group>"; };
 		2989C5BA2BC71BA4002BEFB7 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
 		2989C5BB2BC71BA4002BEFB7 /* log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = log.m; sourceTree = "<group>"; };
-		29C31B732BC719280004CB07 /* libchange-label.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libchange-label.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		299D889F2BC7DB310052F1B7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		299D88A12BC7DB510052F1B7 /* dock-with-only-finder-icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dock-with-only-finder-icons.png"; sourceTree = "<group>"; };
+		29C31B732BC719280004CB07 /* libchange-icon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libchange-icon.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D49EAF2BC7198E00444592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29D49EB12BC7199F00444592 /* libchange-label.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "libchange-label.plist"; sourceTree = "<group>"; };
+		29D49EB12BC7199F00444592 /* libchange-icon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "libchange-icon.plist"; sourceTree = "<group>"; };
 		29D49EB22BC719C400444592 /* substrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substrate.h; sourceTree = "<group>"; };
+		29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOCKTileLayer.h; sourceTree = "<group>"; };
+		29E8D0B02BC7C4EB00342F5E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,15 +46,26 @@
 		2989C5B62BC71A9B002BEFB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29E8D0B02BC7C4EB00342F5E /* CoreGraphics.framework */,
 				2989C5B72BC71A9B002BEFB7 /* ellekit.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		299D88A02BC7DB3D0052F1B7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				299D88A12BC7DB510052F1B7 /* dock-with-only-finder-icons.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		29C31B6A2BC719280004CB07 = {
 			isa = PBXGroup;
 			children = (
-				29D49EAE2BC7197600444592 /* change-label */,
+				299D88A02BC7DB3D0052F1B7 /* Images */,
+				299D889F2BC7DB310052F1B7 /* README.md */,
+				29D49EAE2BC7197600444592 /* change-icon */,
 				29C31B742BC719280004CB07 /* Products */,
 				2989C5B62BC71A9B002BEFB7 /* Frameworks */,
 			);
@@ -58,22 +74,31 @@
 		29C31B742BC719280004CB07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29C31B732BC719280004CB07 /* libchange-label.dylib */,
+				29C31B732BC719280004CB07 /* libchange-icon.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29D49EAE2BC7197600444592 /* change-label */ = {
+		29D49EAE2BC7197600444592 /* change-icon */ = {
 			isa = PBXGroup;
 			children = (
-				29D49EAF2BC7198E00444592 /* main.m */,
-				29D49EB12BC7199F00444592 /* libchange-label.plist */,
-				29D49EB22BC719C400444592 /* substrate.h */,
+				29E8D0AF2BC7C0A500342F5E /* Headers */,
+				29D49EB12BC7199F00444592 /* libchange-icon.plist */,
 				2989C5BA2BC71BA4002BEFB7 /* log.h */,
 				2989C5BB2BC71BA4002BEFB7 /* log.m */,
-				2967988C2BC73F2500B199A5 /* Tile.h */,
+				29D49EB22BC719C400444592 /* substrate.h */,
+				29D49EAF2BC7198E00444592 /* main.m */,
 			);
-			path = "change-label";
+			path = "change-icon";
+			sourceTree = "<group>";
+		};
+		29E8D0AF2BC7C0A500342F5E /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2967988C2BC73F2500B199A5 /* Tile.h */,
+				29E8D0AD2BC7C09E00342F5E /* DOCKTileLayer.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2967988D2BC73F2500B199A5 /* Tile.h in Headers */,
+				29E8D0AE2BC7C09E00342F5E /* DOCKTileLayer.h in Headers */,
 				29D49EB32BC719C400444592 /* substrate.h in Headers */,
 				2989C5BC2BC71BA4002BEFB7 /* log.h in Headers */,
 			);
@@ -92,9 +118,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		29C31B722BC719280004CB07 /* change-label */ = {
+		29C31B722BC719280004CB07 /* change-icon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-label" */;
+			buildConfigurationList = 29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-icon" */;
 			buildPhases = (
 				29C31B6F2BC719280004CB07 /* Headers */,
 				29C31B702BC719280004CB07 /* Sources */,
@@ -105,9 +131,9 @@
 			);
 			dependencies = (
 			);
-			name = "change-label";
+			name = "change-icon";
 			productName = "dock-tweak";
-			productReference = 29C31B732BC719280004CB07 /* libchange-label.dylib */;
+			productReference = 29C31B732BC719280004CB07 /* libchange-icon.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29C31B722BC719280004CB07 /* change-label */,
+				29C31B722BC719280004CB07 /* change-icon */,
 			);
 		};
 /* End PBXProject section */
@@ -158,7 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nscp $TARGET_BUILD_DIR/*.dylib $PROJECT_DIR/change-label/*.plist VenturaVM:/Library/TweakInject\necho \"Tweak copied to VM\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Delete old version of the tweak\nssh VenturaVM 'rm /Library/TweakInject/libchange-icon.dylib /Library/TweakInject/libchange-icon.plist /Users/jb/log_dock.txt'\n\n#Copy the tweak\nscp $TARGET_BUILD_DIR/*.dylib $PROJECT_DIR/change-icon/*.plist VenturaVM:/Library/TweakInject\necho \"Tweak copied to VM\"\n\n# Reload Dock\nssh VenturaVM 'killall Dock'\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -293,6 +319,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"VERBOSE=0",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/TweakInject",
@@ -332,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-label" */ = {
+		29C31B772BC719280004CB07 /* Build configuration list for PBXNativeTarget "change-icon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29C31B782BC719280004CB07 /* Debug */,
